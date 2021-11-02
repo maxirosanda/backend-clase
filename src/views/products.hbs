@@ -16,9 +16,9 @@
                     <input placeholder={{price}} id="price">
                     <input placeholder={{stock}} id="stock">
                     <input type="hidden" value={{id}} id="id">
-                    <button type="submit">Borrar</button>
+                    <button type="submit">Actualizar</button>
                 </form>
-                <form action="/products?_method=DELETE"  >
+                <form action="/products?_method=DELETE" method="POST" >
                     <input  name="id" type="hidden" value={{id}}>
                     <button type="submit">Borrar</button>
                 </form>
