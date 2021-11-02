@@ -6,7 +6,7 @@ const routesProducts = (app) => {
     app.get('/products',controllerProducts.view)
     app.post('/products',controllerProducts.create)
     app.delete('/products',controllerProducts.del)
-    app.put('products',controllerProducts.update)
+    app.put('/products',controllerProducts.update)
 
 }
 
