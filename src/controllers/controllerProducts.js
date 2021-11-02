@@ -1,12 +1,12 @@
 let products = []
 
-export const view = async (req,res)=>{
+export const view = (req,res)=>{
 
     res.status(200).render('products',{products:products})
   
   }
 
-  export const create = async (req,res)=>{
+  export const create = (req,res)=>{
     let product = req.body
     product.id = Math.floor(Math.random()*10000000000001)
     products.push(product)
@@ -16,15 +16,13 @@ export const view = async (req,res)=>{
   
   }  
 
-  export const del = async (req,res) => {
-    console.log(req.body.id)
+  export const del = (req,res) => {
      products = products.filter(element => element.id != req.body.id)
-    console.log(products)
-    
+ 
     res.status(200).redirect('/')
   }
 
-  export const update = async (req,res) =>{
+  export const update =  (req,res) =>{
    
   res.status(200).redirect('/products')
 
