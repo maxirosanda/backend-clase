@@ -19,7 +19,7 @@ export const view = (req,res)=>{
   export const del = (req,res) => {
      products = products.filter(element => element.id != req.body.id)
  
-    res.status(200).redirect('/')
+    res.status(200).redirect('/products')
   }
 
   export const update =  (req,res) =>{
