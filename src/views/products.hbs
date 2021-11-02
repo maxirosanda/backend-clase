@@ -1,0 +1,32 @@
+<h2>Cargar Productos</h2>
+<form action="/products" method="POST" >
+<input placeholder="Nombre Producto" name="title" type="text" required>
+<input placeholder="Precio" type="number" name="price" required>
+<input placeholder="Stock" type="number" name="stock" required>
+
+<button type="submit">cargar Producto</button>
+
+</form>
+<div class="row justify-content-around m-5">
+    {{#each products}}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+                <form action="/products?_method=PUT" method="POST">
+                    <input placeholder={{title}} id="title"> 
+                    <input placeholder={{price}} id="price">
+                    <input placeholder={{stock}} id="stock">
+                    <input type="hidden" value={{id}} id="id">
+                    <button type="submit">Borrar</button>
+                </form>
+                <form action="/products?_method=DELETE"  >
+                    <input  name="id" type="hidden" value={{id}}>
+                    <button type="submit">Borrar</button>
+                </form>
+         </div>
+        </div>
+
+
+    {{/each}}
+
+
+</div>
