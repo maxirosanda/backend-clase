@@ -24,13 +24,8 @@ export const view = async (req,res)=>{
   }
 
   export const update = async (req,res) =>{
-    products.forEach(element => {
-     
-      if (element.id <= 5){
-        carro['tamaño'] = "mediano";
-      }
-
-     });
+   
+  res.status(200).redirect('/products')
 
     }
 
