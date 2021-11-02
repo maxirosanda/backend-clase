@@ -20,6 +20,7 @@ export const view = async (req,res)=>{
     console.log(req.body.id)
      products = products.filter(element => element.id != req.body.id)
     console.log(products)
+    
     res.status(200).redirect('/')
   }
 
